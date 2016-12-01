@@ -1,7 +1,6 @@
 package com.rcolaco.boilerplate;
 
 import com.amazonaws.util.IOUtils;
-import main.java.com.rcolaco.boilerplate.model.WorkRequest;
 import org.glassfish.grizzly.http.server.HttpHandler;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.Request;
@@ -29,7 +28,6 @@ public class Main
                try
                {
                    String s = IOUtils.toString(request.getInputStream());
-                   //final WorkRequest wr = WorkRequest.fromJson(s);
                    System.out.println(s);
                    response.setStatus(200);
                    response.sendAcknowledgement();
